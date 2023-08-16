@@ -1,8 +1,11 @@
-### Hi there 👋
+<img src="banner.svg" alt="the banner contains many pokemons">
 
 <img src="547.svg" alt="the #547 pokemon Whimsicott">
 
-<img src="banner.svg" alt="the banner contains many pokemons">
+- 🤔️ Learning lacking knowledge for underlying frontend
+- 🎨 Newer to creative canvas/css animation
+- 💼 Seeking for a full-time job if possible
+
 
 <!--
 **LKL2017/LKL2017** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
