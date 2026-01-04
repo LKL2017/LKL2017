@@ -2,12 +2,16 @@
 
 <img src="547.svg" alt="the #547 pokemon Whimsicott">
 
-- 🤔️ Learning frontend knowledge constantly
+- 📖 Learning Spec-Driven Development knowledge constantly
 - 🎨 Exploring creative canvas/css coding with p5.js and vanilla js
-- 📖 New to WebGL
+- 🏠 New to WebGL
 - 🤖️ Embracing AI field technology
 
 ---
+#### Favorite AI Assistant
+<img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/claude-icon.svg" alt="JavaScript">
+
+
 #### Good With
 <img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/javascript.svg" alt="JavaScript"><img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/typescript-icon.svg" alt="Typescript"><img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/angular-icon.svg" alt="Angular"><img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/reactivex.svg" alt="RxJs"><img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/vue.svg" alt="Vue"><img style="width: 40px;height: 40px;" src="https://cdn.svgporn.com/logos/git-icon.svg" alt="Git">
 
