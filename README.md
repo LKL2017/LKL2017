@@ -21,7 +21,13 @@
 
 <!-- Inventory -->
 <div align="center">
-  <img src="inventory.svg" alt="Collected Specimens" width="900"/>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,ts,py,react,vue,angular,html,css,nodejs,docker&perline=10" alt="Skills Row 1"/>
+  </a>
+  <br/>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,vite,webpack,electron,threejs,p5js,pytorch,figma,vscode,linux&perline=10" alt="Skills Row 2"/>
+  </a>
 </div>
 
 ---
