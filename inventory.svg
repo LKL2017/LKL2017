@@ -1,91 +1,232 @@
-<svg viewBox="0 0 480 160" width="480" height="160" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 130" width="900" height="130" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
       .pixel-font { font-family: 'Press Start 2P', 'Courier New', monospace; }
+      .label-light { fill: #fff; }
+      .label-dark { fill: #222; }
+
+      @keyframes scrollRight {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-660px); }
+      }
+      @keyframes scrollLeft {
+        0%   { transform: translateX(-660px); }
+        100% { transform: translateX(0); }
+      }
+      .row1 { animation: scrollRight 20s linear infinite; }
+      .row2 { animation: scrollLeft 22s linear infinite; }
     </style>
+
+    <!-- Edge fade mask -->
+    <linearGradient id="fadeMask" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="8%" stop-color="white" stop-opacity="1"/>
+      <stop offset="92%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="edgeFade">
+      <rect width="900" height="130" fill="url(#fadeMask)"/>
+    </mask>
   </defs>
 
   <!-- Title -->
-  <text x="240" y="20" text-anchor="middle" class="pixel-font" font-size="10" fill="#555" letter-spacing="2">COLLECTED SPECIMENS</text>
+  <text x="450" y="16" text-anchor="middle" class="pixel-font" font-size="8" fill="#555" letter-spacing="2">COLLECTED SPECIMENS</text>
 
-  <!-- Item 1: Claude -->
-  <g>
-    <rect x="30" y="40" width="80" height="80" rx="4" fill="#f5ebe0" stroke="#555" stroke-width="2">
-      <animate attributeName="y" values="40;35;40" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="40" y="50" width="60" height="50" rx="2" fill="#c4956a">
-      <animate attributeName="y" values="50;45;50" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <text x="70" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
-      <animate attributeName="y" values="82;77;82" dur="3s" repeatCount="indefinite"/>
-      CLD
-    </text>
-    <text x="70" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
-      01
-    </text>
-    <text x="70" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
-      Claude
-    </text>
-  </g>
+  <!-- Scrolling content with edge fade mask -->
+  <g mask="url(#edgeFade)">
 
-  <!-- Item 2: Cursor -->
-  <g>
-    <rect x="140" y="40" width="80" height="80" rx="4" fill="#e8f0fe" stroke="#555" stroke-width="2">
-      <animate attributeName="y" values="40;35;40" dur="3.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="150" y="50" width="60" height="50" rx="2" fill="#42A5F5">
-      <animate attributeName="y" values="50;45;50" dur="3.4s" repeatCount="indefinite"/>
-    </rect>
-    <text x="180" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
-      <animate attributeName="y" values="82;77;82" dur="3.4s" repeatCount="indefinite"/>
-      CUR
-    </text>
-    <text x="180" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
-      02
-    </text>
-    <text x="180" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
-      Cursor
-    </text>
-  </g>
+    <!-- Row 1: scrolls right (10 icons duplicated = 20) -->
+    <g class="row1">
+      <!-- First set -->
+      <!-- 1. JavaScript -->
+      <g transform="translate(0,26)">
+        <rect width="50" height="40" rx="6" fill="#F7DF1E"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">JS</text>
+      </g>
+      <!-- 2. TypeScript -->
+      <g transform="translate(66,26)">
+        <rect width="50" height="40" rx="6" fill="#3178C6"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">TS</text>
+      </g>
+      <!-- 3. Python -->
+      <g transform="translate(132,26)">
+        <rect width="50" height="40" rx="6" fill="#3776AB"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">PY</text>
+      </g>
+      <!-- 4. React -->
+      <g transform="translate(198,26)">
+        <rect width="50" height="40" rx="6" fill="#61DAFB"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">RE</text>
+      </g>
+      <!-- 5. Vue -->
+      <g transform="translate(264,26)">
+        <rect width="50" height="40" rx="6" fill="#4FC08D"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">VU</text>
+      </g>
+      <!-- 6. Angular -->
+      <g transform="translate(330,26)">
+        <rect width="50" height="40" rx="6" fill="#DD0031"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">AN</text>
+      </g>
+      <!-- 7. HTML -->
+      <g transform="translate(396,26)">
+        <rect width="50" height="40" rx="6" fill="#E34F26"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">HT</text>
+      </g>
+      <!-- 8. CSS -->
+      <g transform="translate(462,26)">
+        <rect width="50" height="40" rx="6" fill="#1572B6"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CS</text>
+      </g>
+      <!-- 9. Node.js -->
+      <g transform="translate(528,26)">
+        <rect width="50" height="40" rx="6" fill="#339933"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">ND</text>
+      </g>
+      <!-- 10. Docker -->
+      <g transform="translate(594,26)">
+        <rect width="50" height="40" rx="6" fill="#2496ED"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">DK</text>
+      </g>
+      <!-- Duplicate set for seamless loop -->
+      <g transform="translate(660,26)">
+        <rect width="50" height="40" rx="6" fill="#F7DF1E"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">JS</text>
+      </g>
+      <g transform="translate(726,26)">
+        <rect width="50" height="40" rx="6" fill="#3178C6"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">TS</text>
+      </g>
+      <g transform="translate(792,26)">
+        <rect width="50" height="40" rx="6" fill="#3776AB"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">PY</text>
+      </g>
+      <g transform="translate(858,26)">
+        <rect width="50" height="40" rx="6" fill="#61DAFB"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">RE</text>
+      </g>
+      <g transform="translate(924,26)">
+        <rect width="50" height="40" rx="6" fill="#4FC08D"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">VU</text>
+      </g>
+      <g transform="translate(990,26)">
+        <rect width="50" height="40" rx="6" fill="#DD0031"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">AN</text>
+      </g>
+      <g transform="translate(1056,26)">
+        <rect width="50" height="40" rx="6" fill="#E34F26"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">HT</text>
+      </g>
+      <g transform="translate(1122,26)">
+        <rect width="50" height="40" rx="6" fill="#1572B6"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CS</text>
+      </g>
+      <g transform="translate(1188,26)">
+        <rect width="50" height="40" rx="6" fill="#339933"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">ND</text>
+      </g>
+      <g transform="translate(1254,26)">
+        <rect width="50" height="40" rx="6" fill="#2496ED"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">DK</text>
+      </g>
+    </g>
 
-  <!-- Item 3: p5.js -->
-  <g>
-    <rect x="250" y="40" width="80" height="80" rx="4" fill="#fde8ef" stroke="#555" stroke-width="2">
-      <animate attributeName="y" values="40;35;40" dur="3.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="260" y="50" width="60" height="50" rx="2" fill="#ED225D">
-      <animate attributeName="y" values="50;45;50" dur="3.8s" repeatCount="indefinite"/>
-    </rect>
-    <text x="290" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
-      <animate attributeName="y" values="82;77;82" dur="3.8s" repeatCount="indefinite"/>
-      P5
-    </text>
-    <text x="290" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
-      03
-    </text>
-    <text x="290" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
-      p5.js
-    </text>
-  </g>
+    <!-- Row 2: scrolls left (10 icons duplicated = 20) -->
+    <g class="row2">
+      <!-- First set -->
+      <!-- 1. Git -->
+      <g transform="translate(0,76)">
+        <rect width="50" height="40" rx="6" fill="#F05032"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">GI</text>
+      </g>
+      <!-- 2. Vite -->
+      <g transform="translate(66,76)">
+        <rect width="50" height="40" rx="6" fill="#646CFF"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">VI</text>
+      </g>
+      <!-- 3. Webpack -->
+      <g transform="translate(132,76)">
+        <rect width="50" height="40" rx="6" fill="#8DD6F9"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">WP</text>
+      </g>
+      <!-- 4. Electron -->
+      <g transform="translate(198,76)">
+        <rect width="50" height="40" rx="6" fill="#47848F"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">EL</text>
+      </g>
+      <!-- 5. Three.js -->
+      <g transform="translate(264,76)">
+        <rect width="50" height="40" rx="6" fill="#000000"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">3D</text>
+      </g>
+      <!-- 6. p5.js -->
+      <g transform="translate(330,76)">
+        <rect width="50" height="40" rx="6" fill="#ED225D"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">P5</text>
+      </g>
+      <!-- 7. PyTorch -->
+      <g transform="translate(396,76)">
+        <rect width="50" height="40" rx="6" fill="#EE4C2C"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">PT</text>
+      </g>
+      <!-- 8. Claude -->
+      <g transform="translate(462,76)">
+        <rect width="50" height="40" rx="6" fill="#c4956a"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CL</text>
+      </g>
+      <!-- 9. Cursor -->
+      <g transform="translate(528,76)">
+        <rect width="50" height="40" rx="6" fill="#42A5F5"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CU</text>
+      </g>
+      <!-- 10. Figma -->
+      <g transform="translate(594,76)">
+        <rect width="50" height="40" rx="6" fill="#F24E1E"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">FI</text>
+      </g>
+      <!-- Duplicate set for seamless loop -->
+      <g transform="translate(660,76)">
+        <rect width="50" height="40" rx="6" fill="#F05032"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">GI</text>
+      </g>
+      <g transform="translate(726,76)">
+        <rect width="50" height="40" rx="6" fill="#646CFF"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">VI</text>
+      </g>
+      <g transform="translate(792,76)">
+        <rect width="50" height="40" rx="6" fill="#8DD6F9"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-dark" font-size="9">WP</text>
+      </g>
+      <g transform="translate(858,76)">
+        <rect width="50" height="40" rx="6" fill="#47848F"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">EL</text>
+      </g>
+      <g transform="translate(924,76)">
+        <rect width="50" height="40" rx="6" fill="#000000"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">3D</text>
+      </g>
+      <g transform="translate(990,76)">
+        <rect width="50" height="40" rx="6" fill="#ED225D"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">P5</text>
+      </g>
+      <g transform="translate(1056,76)">
+        <rect width="50" height="40" rx="6" fill="#EE4C2C"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">PT</text>
+      </g>
+      <g transform="translate(1122,76)">
+        <rect width="50" height="40" rx="6" fill="#c4956a"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CL</text>
+      </g>
+      <g transform="translate(1188,76)">
+        <rect width="50" height="40" rx="6" fill="#42A5F5"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">CU</text>
+      </g>
+      <g transform="translate(1254,76)">
+        <rect width="50" height="40" rx="6" fill="#F24E1E"/>
+        <text x="25" y="25" text-anchor="middle" class="pixel-font label-light" font-size="9">FI</text>
+      </g>
+    </g>
 
-  <!-- Item 4: WebGL -->
-  <g>
-    <rect x="360" y="40" width="80" height="80" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="2">
-      <animate attributeName="y" values="40;35;40" dur="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="370" y="50" width="60" height="50" rx="2" fill="#4CAF50">
-      <animate attributeName="y" values="50;45;50" dur="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <text x="400" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
-      <animate attributeName="y" values="82;77;82" dur="4.2s" repeatCount="indefinite"/>
-      WGL
-    </text>
-    <text x="400" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
-      04
-    </text>
-    <text x="400" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
-      WebGL
-    </text>
   </g>
 </svg>

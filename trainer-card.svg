@@ -3,7 +3,38 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
       .pixel-font { font-family: 'Press Start 2P', 'Courier New', monospace; }
+
+      /* Pixel corner breathing animations — staggered */
+      @keyframes cornerPulse1 { 0%,100%{opacity:0.4} 50%{opacity:1} }
+      @keyframes cornerPulse2 { 0%,100%{opacity:1} 50%{opacity:0.4} }
+      @keyframes cornerPulse3 { 0%,100%{opacity:0.5} 60%{opacity:1} }
+      @keyframes cornerPulse4 { 0%,100%{opacity:1} 40%{opacity:0.4} }
+      .corner-tl { animation: cornerPulse1 3s ease-in-out infinite; }
+      .corner-tr { animation: cornerPulse2 3.4s ease-in-out infinite; }
+      .corner-bl { animation: cornerPulse3 2.8s ease-in-out infinite; }
+      .corner-br { animation: cornerPulse4 3.6s ease-in-out infinite; }
+
+      /* Sparkle animations */
+      @keyframes sparkleRotate1 { 0%{transform:rotate(0deg);opacity:0.3} 50%{transform:rotate(180deg);opacity:1} 100%{transform:rotate(360deg);opacity:0.3} }
+      @keyframes sparkleRotate2 { 0%{transform:rotate(0deg);opacity:1} 50%{transform:rotate(180deg);opacity:0.2} 100%{transform:rotate(360deg);opacity:1} }
+      @keyframes sparkleRotate3 { 0%{transform:rotate(45deg);opacity:0.5} 50%{transform:rotate(225deg);opacity:1} 100%{transform:rotate(405deg);opacity:0.5} }
+      @keyframes sparkleRotate4 { 0%{transform:rotate(0deg);opacity:0.6} 50%{transform:rotate(180deg);opacity:0.1} 100%{transform:rotate(360deg);opacity:0.6} }
+      .sparkle1 { animation: sparkleRotate1 2.5s ease-in-out infinite; transform-origin: 160px 34px; }
+      .sparkle2 { animation: sparkleRotate2 3.2s ease-in-out infinite; transform-origin: 245px 30px; }
+      .sparkle3 { animation: sparkleRotate3 2.8s ease-in-out infinite; transform-origin: 370px 24px; }
+      .sparkle4 { animation: sparkleRotate4 4s ease-in-out infinite; transform-origin: 355px 42px; }
     </style>
+
+    <!-- Gradient for sparkles -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="50%" stop-color="#4ECDC4"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
   </defs>
 
   <!-- Background -->
@@ -14,18 +45,67 @@
   <!-- Inner border -->
   <rect x="10" y="10" width="380" height="200" rx="1" fill="none" stroke="#999" stroke-width="1.5"/>
 
+  <!-- ===== Pixel Corner Marks (L-shaped) ===== -->
+  <!-- Top-left -->
+  <g class="corner-tl">
+    <rect x="1" y="1" width="6" height="6" fill="#555"/>
+    <rect x="1" y="7" width="6" height="6" fill="#555"/>
+    <rect x="7" y="1" width="6" height="6" fill="#555"/>
+  </g>
+  <!-- Top-right -->
+  <g class="corner-tr">
+    <rect x="393" y="1" width="6" height="6" fill="#555"/>
+    <rect x="393" y="7" width="6" height="6" fill="#555"/>
+    <rect x="387" y="1" width="6" height="6" fill="#555"/>
+  </g>
+  <!-- Bottom-left -->
+  <g class="corner-bl">
+    <rect x="1" y="213" width="6" height="6" fill="#555"/>
+    <rect x="1" y="207" width="6" height="6" fill="#555"/>
+    <rect x="7" y="213" width="6" height="6" fill="#555"/>
+  </g>
+  <!-- Bottom-right -->
+  <g class="corner-br">
+    <rect x="393" y="213" width="6" height="6" fill="#555"/>
+    <rect x="393" y="207" width="6" height="6" fill="#555"/>
+    <rect x="387" y="213" width="6" height="6" fill="#555"/>
+  </g>
+
+  <!-- ===== Sparkle Stars ===== -->
+  <!-- Star near title left -->
+  <g class="sparkle1">
+    <path d="M160,30 l0,-4 l0,4 l0,4 l0,-4 l-4,0 l4,0 l4,0 Z" fill="url(#goldGrad)" stroke="none"/>
+  </g>
+  <!-- Star near title right -->
+  <g class="sparkle2">
+    <path d="M245,26 l0,-5 l0,5 l0,5 l0,-5 l-5,0 l5,0 l5,0 Z" fill="url(#rainbowGrad)" stroke="none"/>
+  </g>
+  <!-- Star top-right corner area -->
+  <g class="sparkle3">
+    <path d="M370,20 l0,-3 l0,3 l0,3 l0,-3 l-3,0 l3,0 l3,0 Z" fill="url(#goldGrad)" stroke="none"/>
+  </g>
+  <!-- Small star below top-right -->
+  <g class="sparkle4">
+    <path d="M355,38 l0,-2.5 l0,2.5 l0,2.5 l0,-2.5 l-2.5,0 l2.5,0 l2.5,0 Z" fill="#FFD700" stroke="none"/>
+  </g>
+
   <!-- Title -->
   <text x="200" y="38" text-anchor="middle" class="pixel-font" font-size="12" fill="#333" letter-spacing="2">TRAINER CARD</text>
 
   <!-- Divider line under title -->
   <line x1="20" y1="48" x2="380" y2="48" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- Stat bars -->
+  <!-- ===== Stat bars with shine sweep ===== -->
+
   <!-- CRE - Creativity -->
   <text x="28" y="78" class="pixel-font" font-size="9" fill="#555">CRE</text>
   <rect x="80" y="66" width="240" height="16" rx="2" fill="#e0e0e0"/>
   <rect x="80" y="66" width="211" height="16" rx="2" fill="#4CAF50" opacity="0.85">
     <animate attributeName="width" values="0;211" dur="1.2s" fill="freeze"/>
+  </rect>
+  <!-- Shine sweep -->
+  <rect x="80" y="66" width="30" height="16" rx="2" fill="white" opacity="0.25">
+    <animate attributeName="x" values="50;321" dur="2.5s" begin="1.5s" repeatCount="indefinite"/>
   </rect>
   <text x="340" y="78" class="pixel-font" font-size="9" fill="#555" text-anchor="end">88</text>
 
@@ -35,6 +115,9 @@
   <rect x="80" y="96" width="185" height="16" rx="2" fill="#42A5F5" opacity="0.85">
     <animate attributeName="width" values="0;185" dur="1.2s" fill="freeze"/>
   </rect>
+  <rect x="80" y="96" width="30" height="16" rx="2" fill="white" opacity="0.25">
+    <animate attributeName="x" values="50;295" dur="2.8s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
   <text x="340" y="108" class="pixel-font" font-size="9" fill="#555" text-anchor="end">77</text>
 
   <!-- EXP - Exploration -->
@@ -43,6 +126,9 @@
   <rect x="80" y="126" width="163" height="16" rx="2" fill="#EF5350" opacity="0.85">
     <animate attributeName="width" values="0;163" dur="1.2s" fill="freeze"/>
   </rect>
+  <rect x="80" y="126" width="30" height="16" rx="2" fill="white" opacity="0.25">
+    <animate attributeName="x" values="50;273" dur="3.1s" begin="2.1s" repeatCount="indefinite"/>
+  </rect>
   <text x="340" y="138" class="pixel-font" font-size="9" fill="#555" text-anchor="end">68</text>
 
   <!-- SYN - Synergy -->
@@ -50,6 +136,9 @@
   <rect x="80" y="156" width="240" height="16" rx="2" fill="#e0e0e0"/>
   <rect x="80" y="156" width="108" height="16" rx="2" fill="#FDD835" opacity="0.85">
     <animate attributeName="width" values="0;108" dur="1.2s" fill="freeze"/>
+  </rect>
+  <rect x="80" y="156" width="30" height="16" rx="2" fill="white" opacity="0.25">
+    <animate attributeName="x" values="50;218" dur="3.5s" begin="2.4s" repeatCount="indefinite"/>
   </rect>
   <text x="340" y="168" class="pixel-font" font-size="9" fill="#555" text-anchor="end">45</text>
 

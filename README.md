@@ -13,35 +13,16 @@
 <br/>
 
 <!-- Trainer Card -->
-<table align="center">
-  <tr>
-    <td align="center" width="180">
-      <img src="547.svg" alt="Whimsicott #547" width="150"/>
-    </td>
-    <td align="center">
-      <img src="trainer-card.svg" alt="Trainer Card" width="400"/>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
----
+<div align="center">
+  <img src="547.svg" alt="Whimsicott #547" width="150"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="trainer-card.svg" alt="Trainer Card" width="400"/>
+</div>
 
 <!-- Inventory -->
 <div align="center">
-  <img src="inventory.svg" alt="Collected Specimens" width="480"/>
+  <img src="inventory.svg" alt="Collected Specimens" width="900"/>
 </div>
-
----
-
-## 🐍 Contribution Map
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LKL2017/LKL2017/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/LKL2017/LKL2017/output/github-snake.svg"/>
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/LKL2017/LKL2017/output/github-snake.svg"/>
-</picture>
 
 ---
 
