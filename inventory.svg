@@ -1,0 +1,91 @@
+<svg viewBox="0 0 480 160" width="480" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+      .pixel-font { font-family: 'Press Start 2P', 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="240" y="20" text-anchor="middle" class="pixel-font" font-size="10" fill="#555" letter-spacing="2">COLLECTED SPECIMENS</text>
+
+  <!-- Item 1: Claude -->
+  <g>
+    <rect x="30" y="40" width="80" height="80" rx="4" fill="#f5ebe0" stroke="#555" stroke-width="2">
+      <animate attributeName="y" values="40;35;40" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="40" y="50" width="60" height="50" rx="2" fill="#c4956a">
+      <animate attributeName="y" values="50;45;50" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="70" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
+      <animate attributeName="y" values="82;77;82" dur="3s" repeatCount="indefinite"/>
+      CLD
+    </text>
+    <text x="70" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
+      01
+    </text>
+    <text x="70" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
+      Claude
+    </text>
+  </g>
+
+  <!-- Item 2: Cursor -->
+  <g>
+    <rect x="140" y="40" width="80" height="80" rx="4" fill="#e8f0fe" stroke="#555" stroke-width="2">
+      <animate attributeName="y" values="40;35;40" dur="3.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="150" y="50" width="60" height="50" rx="2" fill="#42A5F5">
+      <animate attributeName="y" values="50;45;50" dur="3.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="180" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
+      <animate attributeName="y" values="82;77;82" dur="3.4s" repeatCount="indefinite"/>
+      CUR
+    </text>
+    <text x="180" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
+      02
+    </text>
+    <text x="180" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
+      Cursor
+    </text>
+  </g>
+
+  <!-- Item 3: p5.js -->
+  <g>
+    <rect x="250" y="40" width="80" height="80" rx="4" fill="#fde8ef" stroke="#555" stroke-width="2">
+      <animate attributeName="y" values="40;35;40" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="260" y="50" width="60" height="50" rx="2" fill="#ED225D">
+      <animate attributeName="y" values="50;45;50" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="290" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
+      <animate attributeName="y" values="82;77;82" dur="3.8s" repeatCount="indefinite"/>
+      P5
+    </text>
+    <text x="290" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
+      03
+    </text>
+    <text x="290" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
+      p5.js
+    </text>
+  </g>
+
+  <!-- Item 4: WebGL -->
+  <g>
+    <rect x="360" y="40" width="80" height="80" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="2">
+      <animate attributeName="y" values="40;35;40" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="370" y="50" width="60" height="50" rx="2" fill="#4CAF50">
+      <animate attributeName="y" values="50;45;50" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="400" y="82" text-anchor="middle" class="pixel-font" font-size="7" fill="#fff">
+      <animate attributeName="y" values="82;77;82" dur="4.2s" repeatCount="indefinite"/>
+      WGL
+    </text>
+    <text x="400" y="135" text-anchor="middle" class="pixel-font" font-size="7" fill="#999">
+      04
+    </text>
+    <text x="400" y="148" text-anchor="middle" class="pixel-font" font-size="6" fill="#bbb">
+      WebGL
+    </text>
+  </g>
+</svg>

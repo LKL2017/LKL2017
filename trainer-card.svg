@@ -1,0 +1,59 @@
+<svg viewBox="0 0 400 220" width="400" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+      .pixel-font { font-family: 'Press Start 2P', 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="220" rx="2" fill="#fafaf5"/>
+
+  <!-- Outer border (pixel double-line) -->
+  <rect x="4" y="4" width="392" height="212" rx="1" fill="none" stroke="#555" stroke-width="3"/>
+  <!-- Inner border -->
+  <rect x="10" y="10" width="380" height="200" rx="1" fill="none" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="200" y="38" text-anchor="middle" class="pixel-font" font-size="12" fill="#333" letter-spacing="2">TRAINER CARD</text>
+
+  <!-- Divider line under title -->
+  <line x1="20" y1="48" x2="380" y2="48" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Stat bars -->
+  <!-- CRE - Creativity -->
+  <text x="28" y="78" class="pixel-font" font-size="9" fill="#555">CRE</text>
+  <rect x="80" y="66" width="240" height="16" rx="2" fill="#e0e0e0"/>
+  <rect x="80" y="66" width="211" height="16" rx="2" fill="#4CAF50" opacity="0.85">
+    <animate attributeName="width" values="0;211" dur="1.2s" fill="freeze"/>
+  </rect>
+  <text x="340" y="78" class="pixel-font" font-size="9" fill="#555" text-anchor="end">88</text>
+
+  <!-- TEC - Technical -->
+  <text x="28" y="108" class="pixel-font" font-size="9" fill="#555">TEC</text>
+  <rect x="80" y="96" width="240" height="16" rx="2" fill="#e0e0e0"/>
+  <rect x="80" y="96" width="185" height="16" rx="2" fill="#42A5F5" opacity="0.85">
+    <animate attributeName="width" values="0;185" dur="1.2s" fill="freeze"/>
+  </rect>
+  <text x="340" y="108" class="pixel-font" font-size="9" fill="#555" text-anchor="end">77</text>
+
+  <!-- EXP - Exploration -->
+  <text x="28" y="138" class="pixel-font" font-size="9" fill="#555">EXP</text>
+  <rect x="80" y="126" width="240" height="16" rx="2" fill="#e0e0e0"/>
+  <rect x="80" y="126" width="163" height="16" rx="2" fill="#EF5350" opacity="0.85">
+    <animate attributeName="width" values="0;163" dur="1.2s" fill="freeze"/>
+  </rect>
+  <text x="340" y="138" class="pixel-font" font-size="9" fill="#555" text-anchor="end">68</text>
+
+  <!-- SYN - Synergy -->
+  <text x="28" y="168" class="pixel-font" font-size="9" fill="#555">SYN</text>
+  <rect x="80" y="156" width="240" height="16" rx="2" fill="#e0e0e0"/>
+  <rect x="80" y="156" width="108" height="16" rx="2" fill="#FDD835" opacity="0.85">
+    <animate attributeName="width" values="0;108" dur="1.2s" fill="freeze"/>
+  </rect>
+  <text x="340" y="168" class="pixel-font" font-size="9" fill="#555" text-anchor="end">45</text>
+
+  <!-- Bottom class label -->
+  <line x1="20" y1="186" x2="380" y2="186" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="200" y="205" text-anchor="middle" class="pixel-font" font-size="7" fill="#999" letter-spacing="1">CLASS: DIGITAL / CREATIVE / ORGANIC</text>
+</svg>

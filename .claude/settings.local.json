@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(pip install:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "WebFetch(domain:platane.github.io)"
     ]
   }
 }

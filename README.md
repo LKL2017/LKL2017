@@ -1,6 +1,6 @@
 <!-- Banner -->
 <div align="center">
-  <img src="banner.svg" alt="Hello World Banner" width="900"/>
+  <img src="banner.svg" alt="Extra Life Banner" width="900"/>
 </div>
 
 <!-- Typing SVG -->
@@ -18,15 +18,8 @@
     <td align="center" width="180">
       <img src="547.svg" alt="Whimsicott #547" width="150"/>
     </td>
-    <td>
-      <h3>🎮 Trainer Profile</h3>
-      <p>
-        🎮 Gamer & Pokemon Trainer<br/>
-        🌿 Favorite: Whimsicott #547<br/>
-        🤖 AI Enthusiast<br/>
-        🎨 Creative Coder | p5.js & WebGL<br/>
-        ⚡ Always exploring new digital worlds
-      </p>
+    <td align="center">
+      <img src="trainer-card.svg" alt="Trainer Card" width="400"/>
     </td>
   </tr>
 </table>
@@ -35,41 +28,9 @@
 
 ---
 
-## 🎒 Inventory
-
-**⚔️ Main Weapons**
-
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,ts,angular,vue,html,css&theme=light" alt="Main Skills"/>
-  </a>
-</p>
-
-**🔧 Tools**
-
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=webpack,vite,electron,docker,nodejs,nginx,git&theme=light" alt="Tools"/>
-  </a>
-</p>
-
-**🤖 AI Companion**
-
-<p align="center">
-  <img src="https://cdn.svgporn.com/logos/claude-icon.svg" width="48" alt="Claude"/>
-</p>
-
----
-
-## 📊 Battle Stats
-
+<!-- Inventory -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=LKL2017&show_icons=true&theme=vue&hide_border=true&border_radius=10" alt="GitHub Stats" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LKL2017&layout=compact&theme=vue&hide_border=true&border_radius=10" alt="Top Languages" height="180"/>
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=LKL2017&theme=vue&hide_border=true&border_radius=10" alt="GitHub Streak" height="180"/>
+  <img src="inventory.svg" alt="Collected Specimens" width="480"/>
 </div>
 
 ---
