@@ -36,6 +36,15 @@
       <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
 
+    <!-- Shine gradient for stat bars -->
+    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="40%" stop-color="white" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="white" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
     <!-- Clip paths for stat bar shine -->
     <clipPath id="clipCRE"><rect x="80" y="66" width="211" height="16" rx="2"/></clipPath>
     <clipPath id="clipTEC"><rect x="80" y="96" width="185" height="16" rx="2"/></clipPath>
@@ -106,8 +115,8 @@
     <animate attributeName="width" values="0;211" dur="1.2s" fill="freeze"/>
   </rect>
   <g clip-path="url(#clipCRE)">
-    <polygon points="0,0 30,0 18,16 -12,16" fill="white" opacity="0.3">
-      <animateTransform attributeName="transform" type="translate" values="50,66;310,66" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    <polygon points="0,0 16,0 8,16 -8,16" fill="url(#shineGrad)">
+      <animateTransform attributeName="transform" type="translate" values="50,66;50,66;310,66;310,66" keyTimes="0;0.75;0.9;1" dur="4s" begin="1.5s" repeatCount="indefinite"/>
     </polygon>
   </g>
   <text x="340" y="78" class="pixel-font" font-size="9" fill="#555" text-anchor="end">88</text>
@@ -119,8 +128,8 @@
     <animate attributeName="width" values="0;185" dur="1.2s" fill="freeze"/>
   </rect>
   <g clip-path="url(#clipTEC)">
-    <polygon points="0,0 30,0 18,16 -12,16" fill="white" opacity="0.3">
-      <animateTransform attributeName="transform" type="translate" values="50,96;285,96" dur="3.3s" begin="1.8s" repeatCount="indefinite"/>
+    <polygon points="0,0 16,0 8,16 -8,16" fill="url(#shineGrad)">
+      <animateTransform attributeName="transform" type="translate" values="50,96;50,96;285,96;285,96" keyTimes="0;0.75;0.9;1" dur="4.3s" begin="1.8s" repeatCount="indefinite"/>
     </polygon>
   </g>
   <text x="340" y="108" class="pixel-font" font-size="9" fill="#555" text-anchor="end">77</text>
@@ -132,8 +141,8 @@
     <animate attributeName="width" values="0;163" dur="1.2s" fill="freeze"/>
   </rect>
   <g clip-path="url(#clipEXP)">
-    <polygon points="0,0 30,0 18,16 -12,16" fill="white" opacity="0.3">
-      <animateTransform attributeName="transform" type="translate" values="50,126;263,126" dur="3.6s" begin="2.1s" repeatCount="indefinite"/>
+    <polygon points="0,0 16,0 8,16 -8,16" fill="url(#shineGrad)">
+      <animateTransform attributeName="transform" type="translate" values="50,126;50,126;263,126;263,126" keyTimes="0;0.75;0.9;1" dur="4.6s" begin="2.1s" repeatCount="indefinite"/>
     </polygon>
   </g>
   <text x="340" y="138" class="pixel-font" font-size="9" fill="#555" text-anchor="end">68</text>
@@ -145,8 +154,8 @@
     <animate attributeName="width" values="0;108" dur="1.2s" fill="freeze"/>
   </rect>
   <g clip-path="url(#clipSYN)">
-    <polygon points="0,0 30,0 18,16 -12,16" fill="white" opacity="0.3">
-      <animateTransform attributeName="transform" type="translate" values="50,156;208,156" dur="3.9s" begin="2.4s" repeatCount="indefinite"/>
+    <polygon points="0,0 16,0 8,16 -8,16" fill="url(#shineGrad)">
+      <animateTransform attributeName="transform" type="translate" values="50,156;50,156;208,156;208,156" keyTimes="0;0.75;0.9;1" dur="4.9s" begin="2.4s" repeatCount="indefinite"/>
     </polygon>
   </g>
   <text x="340" y="168" class="pixel-font" font-size="9" fill="#555" text-anchor="end">45</text>
