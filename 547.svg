@@ -1,22 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="200px" viewBox="0.0 -4.85 308.55 286.45" style="overflow:visible">
     <style>
-    	.sprite {
-        	animation: greet 2.4s infinite;
-        	transform-origin: center;
+        .sprite {
+            animation: windSway 6s ease-in-out infinite;
+            transform-box: fill-box;
+            transform-origin: center;
         }
-        @keyframes greet {
-        	0% {
-        		transform: rotate(-6deg);
-        	}
-        	50% {
-        		transform: rotate(6deg);
-        	}
-        	100% {
-        		transform: rotate(-6deg);
-        	}
+        @keyframes windSway {
+            0%   { transform: rotate(-4deg) translateX(0px); }
+            15%  { transform: rotate(2deg) translateX(3px); }
+            35%  { transform: rotate(-6deg) translateX(-2px); }
+            55%  { transform: rotate(3deg) translateX(4px); }
+            75%  { transform: rotate(-2deg) translateX(-1px); }
+            100% { transform: rotate(-4deg) translateX(0px); }
         }
+
+        /* Falling leaves */
+        .leaf1 { animation: leafFall1 7s ease-in-out infinite; }
+        .leaf2 { animation: leafFall2 9s ease-in-out infinite; }
+        .leaf3 { animation: leafFall3 8s ease-in-out infinite; }
+
+        @keyframes leafFall1 {
+            0%   { transform: translate(60px, -20px) rotate(0deg); opacity: 0; }
+            10%  { opacity: 0.8; }
+            50%  { transform: translate(30px, 140px) rotate(180deg); opacity: 0.7; }
+            90%  { opacity: 0.3; }
+            100% { transform: translate(50px, 300px) rotate(360deg); opacity: 0; }
+        }
+        @keyframes leafFall2 {
+            0%   { transform: translate(220px, -30px) rotate(45deg); opacity: 0; }
+            10%  { opacity: 0.7; }
+            40%  { transform: translate(250px, 110px) rotate(200deg); opacity: 0.8; }
+            70%  { transform: translate(210px, 210px) rotate(300deg); opacity: 0.5; }
+            100% { transform: translate(240px, 310px) rotate(400deg); opacity: 0; }
+        }
+        @keyframes leafFall3 {
+            0%   { transform: translate(150px, -15px) rotate(-30deg); opacity: 0; }
+            15%  { opacity: 0.6; }
+            45%  { transform: translate(120px, 130px) rotate(150deg); opacity: 0.75; }
+            100% { transform: translate(140px, 300px) rotate(330deg); opacity: 0; }
+        }
+
     </style>
+
+    <!-- Whimsicott sprite -->
     <g class="sprite">
         <path fill="#fff1ad"
               d="M277.35 85.35 Q283.25 89.1 288.3 94.3 304.35 111.0 305.55 136.2 306.15 149.45 300.75 163.3 296.2 175.0 290.45 180.65 L292.7 185.25 Q294.5 190.55 292.2 194.25 289.9 197.95 286.25 199.25 L283.0 199.8 283.5 205.95 Q283.65 213.55 281.65 220.9 275.25 244.45 250.2 256.8 246.25 259.45 239.1 261.15 224.85 264.55 208.9 260.0 201.4 258.6 192.55 257.9 174.8 256.6 168.0 260.3 161.15 264.0 156.5 267.35 L153.25 270.0 Q145.95 273.6 135.3 276.25 114.0 281.6 97.4 277.05 77.65 271.65 63.45 258.65 49.45 245.85 45.8 230.3 41.65 231.85 36.8 232.6 27.1 234.1 23.65 230.05 20.0 225.7 22.7 216.85 25.0 209.4 28.65 205.75 22.0 201.35 15.2 192.55 1.6 174.95 1.0 152.85 0.55 147.1 2.9 138.65 7.5 121.75 21.25 108.4 19.55 105.35 19.4 101.75 19.15 94.6 27.2 91.95 25.6 86.8 27.3 78.05 30.7 60.5 47.15 42.55 51.55 36.9 60.4 31.35 78.1 20.25 100.45 20.7 97.95 18.95 96.7 14.95 95.45 10.85 96.95 9.3 102.5 3.75 110.5 4.9 119.55 6.2 133.0 16.2 L139.7 11.9 Q148.3 7.05 157.7 4.25 187.85 -4.85 215.1 9.6 238.2 21.85 250.7 43.25 254.8 50.3 257.15 57.35 258.85 62.4 258.85 64.15 L261.75 64.55 Q265.15 65.2 267.7 66.7 275.85 71.5 272.45 82.65 L277.35 85.35"/>
@@ -159,4 +186,19 @@
         <path fill="#0f141b"
               d="M118.4 280.25 Q100.7 280.95 84.65 274.2 69.0 267.6 58.3 255.1 47.2 242.15 44.6 226.5 44.2 224.05 44.7 223.9 45.2 223.75 45.7 226.15 48.85 241.45 59.65 253.65 70.1 265.45 85.45 271.9 101.35 278.6 118.85 277.85 136.0 277.05 151.9 269.2 152.2 269.05 152.6 270.15 152.95 271.2 152.65 271.35 136.2 279.5 118.4 280.25"/>
     </g>
+
+    <!-- Falling leaves (foreground) -->
+    <g class="leaf1">
+        <ellipse rx="14" ry="7" fill="#4CAF50" opacity="0.8" transform="skewX(-10)"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#2E7D32" stroke-width="1.2"/>
+    </g>
+    <g class="leaf2">
+        <ellipse rx="11" ry="6" fill="#66BB6A" opacity="0.75" transform="skewX(8)"/>
+        <line x1="-9" y1="0" x2="9" y2="0" stroke="#388E3C" stroke-width="1"/>
+    </g>
+    <g class="leaf3">
+        <ellipse rx="12" ry="6.5" fill="#81C784" opacity="0.8" transform="skewX(-5)"/>
+        <line x1="-10" y1="0" x2="10" y2="0" stroke="#43A047" stroke-width="1.1"/>
+    </g>
+
 </svg>
